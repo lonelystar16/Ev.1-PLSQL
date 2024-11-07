@@ -1,0 +1,1 @@
+-- * En este archivo SQL, se crearán las consultas, vistas, funciones y procedimientos almacenados necesarios para la creación de la base de datos.
