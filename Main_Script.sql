@@ -216,18 +216,6 @@ BEGIN
 
     DBMS_OUTPUT.PUT_LINE('');
 
-    SELECT TP.DESC_TIPO_PROPIEDAD, COUNT(*), SUM(P.VALOR_ARRIENDO)
-    INTO v_tipoPropiedad, v_numPropiedad, v_renta
-    FROM TIPO_PROPIEDAD TP
-    JOIN PROPIEDAD P
-    ON TP.ID_TIPO_PROPIEDAD = P.ID_TIPO_PROPIEDAD
-    WHERE TP.ID_TIPO_PROPIEDAD = :b_propiedad4
-    GROUP BY TP.DESC_TIPO_PROPIEDAD;
-    DBMS_OUTPUT.PUT_LINE('Resumen de: ' || v_tipoPropiedad);
-    DBMS_OUTPUT.PUT_LINE('Total de Propiedades: ' || v_numPropiedad);
-    DBMS_OUTPUT.PUT_LINE('Valor Total Arriendo: ' || TRIM(TO_CHAR(v_renta,'$999g999g999')));
-
-    DBMS_OUTPUT.PUT_LINE('');
 
     SELECT TP.DESC_TIPO_PROPIEDAD, COUNT(*), SUM(P.VALOR_ARRIENDO)
     INTO v_tipoPropiedad, v_numPropiedad, v_renta
